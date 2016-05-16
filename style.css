@@ -1,194 +1,283 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+/*global*/
+body {
+    margin:0;
+    background: azure;
+}
+section.intro {
+    /*border: 2px solid black;*/
+}
 header {
-	padding-top: 20px;
-	height: 87px;
+    height: 100px;
+}
+h1 {
+    /*border: 2px solid black;*/
+    width: 837px;
+    height: 100px;
+    margin: 0 300px 0 103px;
+    font-size:52px;
+    font-family: Courier New;
+}
+.intro h2 {
+    /* border: 2px solid black; */
+    width: 371px;
+    height: 101px;
+    position: fixed;
+    left:-118px;
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    color:black;
+    text-align:center;
 }
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+.intro h2:after{
+    content: ' ';
+    display:block;
+    position:absolute;
+    width: 50px;
+    height: 346px;
+    top: -156px;
+    right: 175px;
+    background-image: url("pencil.png");
+    background-size:100% 100%; 
+    z-index: -999999;
+    opacity:.4;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+div.summary {
+    /*border: 2px solid black;*/
+    width: 837px;
+    height: 70px;
+    margin-left: 103px;
+    margin-right: 300px;
+}
+.intro {
+    position: relative;
+}
+.intro:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 340px;
+    height: 223px;
+    background-size: 1;
+    opacity: 0.4;
+    background-image: url("glasses.png");
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 290px 138px;
+    
+}
+.intro .summary a {
+    display: inline-block;
+    padding: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4dc3ff;
+    border: 1px solid black;
+    border-radius: 9px;
+    box-shadow: 0 4px grey;
+}
+.intro.header {
+    background-image: url(tree.png)
+    
+}
+.preamble p {
+    font-size:12px;
+    margin: 1px;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.intro .summary a:hover {
+    background-color: #3e8e41
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+.intro .summary a:focus {
+  background-color: #3e8e41;
+  box-shadow: 0 5px black;
+  transform: translateY(4px);
+}
+.intro .summary p:nth-child(1) {
+    width: 49%;
+    height: 69px;
+    margin-top: 0;
+    margin-bottom:0;
+    float: left;
+}
+ .intro .summary p:nth-child(2) {
+    width: 150px;
+    height: 69px;
+    margin-top: 0;
+    margin-right: 246px;
+    float: right;
+}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+div.preamble {
+    /*border: 2px solid black;*/
+    width: 837px;
+    height: 175px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-left: 103px;
+    margin-right: 300px;
+}
+div.page-wrapper {
+    
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+/*styling of all .main.supporting section of code*/
+.main.supporting {
+    margin-left: 105px;
+    height: auto;
+    width: 494px;
+    margin:0 auto;
+}
+.main.supporting div {
+    height: 86px;
+    overflow: hidden; 
+}
+.main.supporting .explanation:hover {
+    height: 390px;
+    transition: 2s height;
+}
+.main.supporting .participation:hover {
+    height: 405px;
+    transition: 2s height;
+}
+.main.supporting .benefits:hover {
+    height: 225px;
+    transition: 2s height;
+}
+.main.supporting .requirements:hover {
+    height: 625px;
+    transition: 3s height;
+}
+.main.supporting h3 {
+    height: 60px;
+    margin:0;
+    padding-top:48px;
+    text-align: center;
+    background-image:url('book.png');
+    background-repeat: no-repeat;
+    background-size:100% 84px;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+aside.sidebar {
+    width:100%;
+    margin:10px 130px 0 208px;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+footer {
+    position: relative;
+    bottom: -225px;
+    left: -58px;
+    width: 600px;
+    right: 0;
+    margin-bottom:10px;
+}
+
+footer a {
+    width:0;
+    height:0;
+    color:transparent;
+}
+
+footer a:after{
+    content: ' ';
+    display:inline-block;
+    width:80px;
+    height:80px;
+    background-size: 80px 80px;
+}
+
+footer .zen-validate-html:after {
+    background-image: url(images/htmlicon.png);
+}
+
+footer .zen-validate-css:after {
+    background-image: url(images/cssicon.jpeg);
+}
+
+footer .zen-license:after {
+    background-image: url(images/ccIcon.png);
+}
+
+footer .zen-accessibility:after {
+    background-image: url(images/accessibilityIcon.png);
+}
+
+footer .zen-github:after {
+    background-image: url(images/githugIcon.png);
+}
 
 
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+/* dropdown side bar styles 
+    dropdown = sidebar .wrapper > div
+    dropdown btn = .sidebar .wrapper > div h3
+    dropdown content = .sidebar .design-selection ul
+*/
+.sidebar .wrapper > div {
+    position: relative;
+    display: inline-block;
+    width:200px;
+}
+
+.sidebar .wrapper > div h3{
+    background-color: #4dc3ff;
+    color: white;
+    padding: 16px 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar .wrapper > div ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:250px;
+    margin-top:-16px;
+    list-style-type: none; 
+    padding:0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
 
-.extra1 {
-	background: transparent url(cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+.sidebar .wrapper > div ul li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+.sidebar .wrapper > div ul{
+}
+
+.sidebar .wrapper > div ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar .wrapper > div:hover ul {
+    display: block;
+}
+
+.sidebar .wrapper > div:hover h3 {
+    background-color: #3e8e41;
+}
+
+
